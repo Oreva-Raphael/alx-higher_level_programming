@@ -1,2 +1,8 @@
 #!/bin/bash
+PYCFILE="${PYFILE}c"
 python3 -m py_compile "$PYFILE"
+cd __pycache__
+mv *.pyc "$PYCFILE"
+mv "$PYCFILE" ..
+#incase of error
+#rm -rf __pycache__
