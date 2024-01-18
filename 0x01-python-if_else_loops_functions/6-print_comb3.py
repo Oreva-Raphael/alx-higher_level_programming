@@ -4,4 +4,4 @@ for i in range(0, 10):
         if i == 8 and j == 9:
             print("89")
         elif i < j:
-            print("{}{}".format(i,j), end=", ")
+            print("{}{}".format(i, j), end=", ")
