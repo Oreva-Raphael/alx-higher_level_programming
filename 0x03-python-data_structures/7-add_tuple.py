@@ -1,16 +1,15 @@
+#!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    result = ()
+    res = ()
     len_a = len(tuple_a)
-    len__b = len(tuple_b)
+    len_b = len(tuple_b)
 
-    max_length = max(len_a, len__b)
-    
-    for i in range(2):
-        if i < len_a and i < len__b:
-            result += (tuple_a[i] + tuple_b[i]),
-        elif i >= len_a:
-            result += (tuple_b[i]),
-        elif i >= len__b:
-            result += (tuple_a[i]),
-    
-    return result
+    max_tuple = (len_a) if (len(tuple_a) > len(tuple_b)) else (len_b)
+    for x in range(2):
+        if (x < len_a) & (x < len_b):
+            res += (tuple_a[x] + tuple_b[x]),
+        elif x >= len_a:
+            res += (tuple_b[x]),
+        elif x >= len_b:
+            res += (tuple_a[x]),
+    return res
