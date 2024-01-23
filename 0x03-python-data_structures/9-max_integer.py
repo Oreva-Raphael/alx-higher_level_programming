@@ -1,9 +1,15 @@
+def len_(my_list):
+    output = 0
+    for q in my_list:
+        output += 1
+    return output
+
 def max_integer(my_list=[]):
-    if not my_list:
+    if len_(my_list) == 0:
         return None
-    
-    greatest = my_list[0]
-    for w in my_list:
-        if w > greatest:
-            greatest = w
-    return greatest
+    else:
+        greatest = my_list[0]
+        for w in my_list:
+            if w > greatest:
+                greatest = w
+        return greatest
