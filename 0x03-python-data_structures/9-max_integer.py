@@ -11,6 +11,9 @@ def max_integer(my_list=[]):
     else:
         greatest = my_list[0]
         for w in my_list:
-            if w > greatest:
-                greatest = w
+            if isinstance(w, (int, float)):
+                if w > greatest:
+                    greatest = w
+            else:
+                continue
         return greatest
